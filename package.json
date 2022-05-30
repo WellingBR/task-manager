@@ -1,0 +1,36 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "Um aplicativo desktop para adicionar/editar/remover tarefas.",
+  "main": "index.js",
+  "homepage": "https://github.com/WellingBR/task-manager",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac",
+    "build:windows": "electron-builder --windows",
+    "build:linux": "electron-builder --linux"
+  },
+  "keywords": [],
+  "author": "WellingBR <wellingtondevpa@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^19.0.0",
+    "electron-builder": "^23.0.3",
+    "tailwindcss": "^3.0.24"
+  },
+  "build": {
+    "appId": "com.wellingbr.taskmanager",
+    "productName": "Task Manager",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ]
+    }
+  }
+}
